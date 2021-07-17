@@ -2,20 +2,18 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-          <!-- <div class="edit-form"> -->
-            <form style="margin-left: 0px;margin-right: 0px;">
-              <textarea
-                name="memo-text"
-                id="memo-text"
-                cols="40"
-                rows="5"
-                v-model="text"
-                required
-              ></textarea>
-              <button @click.prevent="save" class="primary">保存</button>
-              <button @click.prevent="$emit('delete', memo.id)" class="primary">削除</button>
-            </form>
-          <!-- </div> -->
+          <form style="margin-left: 0px;margin-right: 0px;">
+            <textarea
+              name="memo-text"
+              id="memo-text"
+              cols="40"
+              rows="5"
+              v-model="text"
+              required
+            ></textarea>
+            <button @click.prevent="save" class="primary">保存</button>
+            <button @click.prevent="$emit('delete', memo.id)" class="primary">削除</button>
+          </form>
         </div>
       </div>
     </div>
