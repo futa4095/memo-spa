@@ -20,8 +20,5 @@ export default {
     memos: Array,
   },
   emits: ["show"],
-  setup() {
-    return {}
-  },
 }
 </script>
