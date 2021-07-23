@@ -2,7 +2,7 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-          <form style="margin-left: 0px;margin-right: 0px;">
+          <form class="memo-edit">
             <textarea
               name="memo-text"
               id="memo-text"
@@ -72,5 +72,10 @@ export default {
 
 button {
   width: 170px;
+}
+
+.memo-edit {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 </style>
