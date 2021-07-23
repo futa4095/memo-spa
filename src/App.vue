@@ -42,15 +42,15 @@ export default {
       memos.value.push(memo)
       showMemo(memos.value.length - 1)
     }
-    const saveMemo = (newMemo) => {
+    const saveMemo = newMemo => {
       const memo = memos.value.find((memo) => memo.id === newMemo.id)
       memo.title = newMemo.title
       memo.text = newMemo.text
       editingMemo.value = null
       saveMemos()
     }
-    const deleteMemo = (id) => {
-      const index = memos.value.findIndex((memo) => memo.id === id)
+    const deleteMemo = id => {
+      const index = memos.value.findIndex(memo => memo.id === id)
       if (index >= 0) {
         memos.value.splice(index, 1)
       }
@@ -58,7 +58,7 @@ export default {
       localStorage.setItem(MEMO_STORAGE_KEY, JSON.stringify(memos.value))
       saveMemos()
     }
-    const showMemo = (index) => {
+    const showMemo = index => {
       editingMemo.value = memos.value[index]
     }
     return {
