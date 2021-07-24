@@ -43,7 +43,7 @@ export default {
       showMemo(memos.value.length - 1)
     }
     const saveMemo = newMemo => {
-      const memo = memos.value.find((memo) => memo.id === newMemo.id)
+      const memo = memos.value.find(memo => memo.id === newMemo.id)
       memo.title = newMemo.title
       memo.text = newMemo.text
       editingMemo.value = null
